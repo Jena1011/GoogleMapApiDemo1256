@@ -67,6 +67,8 @@ public class WeatherActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
             return "failed!!";
+        } catch (Exception e){
+            return e.getMessage();
         }
     }
 
