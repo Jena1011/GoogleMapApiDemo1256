@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@drawable/raining_day"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rec_tangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Sat. 12/21/2022"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="10:16"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/tvWindDirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Wind Direct: North"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/tvWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Wind Speed: 9km/h"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvWindDirect"
+        app:layout_constraintTop_toBottomOf="@+id/tvWindDirect"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="27°"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toEndOf="@+id/tvWindSpeed"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <ImageView
+        android:id="@+id/ivWeather"
+        android:layout_width="82dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/rain_day"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/tvStatus"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="122dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:text="Humid and Partly Cloudy"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeather"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/tvMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Max:31°"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvStatus"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="@+id/tvStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/tvMinTemp"
+        android:layout_width="53dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="12dp"
+        android:text="Min:25°"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMaxTemp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvMaxTemp"
+        app:layout_constraintTop_toBottomOf="@+id/tvMaxTemp"
+        android:textStyle="bold"
+        android:textColor="#FFF"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
