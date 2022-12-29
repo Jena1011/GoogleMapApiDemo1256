@@ -48,7 +48,7 @@ public class WeatherActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         double lat = b.getDouble("lat");
         double lng = b.getDouble("lng");
-        new MyAsyncTask().execute(lat + "", lng + "");
+        new MyAsyncTask().execute();
 
     }
 
@@ -87,7 +87,7 @@ public class WeatherActivity extends AppCompatActivity {
             Log.v("jena", result);
 
             try {
-                JSONObject jObj = new JSONObject(fetchWeatherData());
+                JSONObject jObj = new JSONObject(result);
 
                 // 取得當前時間 (格式化)
                 long current = System.currentTimeMillis();
